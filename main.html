@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Main Page</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5.0.0-beta.8/daisyui.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="bg-gray-900">
+    <section class="max-w-md bg-gray-200 mx-auto min-h-screen">
+      <header class="p-5">
+        <nav class="flex justify-around items-center">
+          <img class="w-12" src="assets/Group.png" alt="" />
+          <div class="mr-28">
+            <h1 class="font-extrabold text-2xl">$ <span>45000</span></h1>
+            <p>Available Balance</p>
+          </div>
+          <button id="logout-btn" class="btn bg-white">Logout</button>
+        </nav>
+      </header>
+      <hr class="opacity-10 w-full" />
+      <main class="p-5">
+        <div>
+          <img src="assets/Navigation.png" alt="" />
+          <p class="opacity-70 py-4">
+            Enjoy easy and convenient financial services with us. Cashout charge
+            is low and
+          </p>
+        </div>
+        <!-- card -->
+        <div class="grid grid-cols-3 gap-3">
+          <div class="card bg-base-100">
+            <figure class="p-4">
+              <img src="assets/wallet1.png" alt="" />
+            </figure>
+            <div class="mx-auto pb-5">
+              <h2 class="card-title">Add Money</h2>
+            </div>
+          </div>
+          <div class="card bg-base-100">
+            <figure class="p-4">
+              <img src="assets/send1.png" alt="" />
+            </figure>
+            <div class="mx-auto pb-5">
+              <h2 class="card-title">Cashout</h2>
+            </div>
+          </div>
+          <div class="card bg-base-100">
+            <figure class="p-4">
+              <img src="assets/money1.png" alt="" />
+            </figure>
+            <div class="mx-auto pb-5">
+              <h2 class="card-title">Transfer Money</h2>
+            </div>
+          </div>
+          <div class="card bg-base-100">
+            <figure class="p-4">
+              <img src="assets/bonus1.png" alt="" />
+            </figure>
+            <div class="mx-auto pb-5">
+              <h2 class="card-title">Get Bonus</h2>
+            </div>
+          </div>
+          <div class="card bg-base-100">
+            <figure class="p-4">
+              <img src="assets/purse1.png" alt="" />
+            </figure>
+            <div class="mx-auto pb-5">
+              <h2 class="card-title">Pay Bill</h2>
+            </div>
+          </div>
+          <div class="card bg-base-100">
+            <figure class="p-4">
+              <img src="assets/transaction1.png" alt="" />
+            </figure>
+            <div class="mx-auto pb-5">
+              <h2 class="card-title">Transactions</h2>
+            </div>
+          </div>
+        </div>
+      </main>
+    </section>
+    <script src="js/main.js"></script>
+  </body>
+</html>
