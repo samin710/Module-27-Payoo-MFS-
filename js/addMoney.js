@@ -28,7 +28,6 @@ document
         <h3>${amount}</h3>
         <h3>Account number: ${accountNumber}</h3>
         `;
-
         transactionContainer.appendChild(div);
         console.log(p);
       } else {
