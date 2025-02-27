@@ -17,7 +17,9 @@
         <nav class="flex justify-around items-center">
           <img class="w-12" src="assets/Group.png" alt="" />
           <div class="mr-28">
-            <h1 class="font-extrabold text-2xl">$ <span>45000</span></h1>
+            <h1 class="font-extrabold text-2xl">
+              $ <span id="digit">45000</span>
+            </h1>
             <p>Available Balance</p>
           </div>
           <button id="logout-btn" class="btn bg-white">Logout</button>
@@ -32,9 +34,9 @@
             is low and
           </p>
         </div>
-        <!-- card -->
+        <!-- cards -->
         <div class="grid grid-cols-3 gap-3">
-          <div class="card bg-base-100">
+          <div id="add-money-box" class="card bg-base-100">
             <figure class="p-4">
               <img src="assets/wallet1.png" alt="" />
             </figure>
@@ -42,7 +44,7 @@
               <h2 class="card-title">Add Money</h2>
             </div>
           </div>
-          <div class="card bg-base-100">
+          <div id="cashout-box" class="card bg-base-100">
             <figure class="p-4">
               <img src="assets/send1.png" alt="" />
             </figure>
@@ -55,7 +57,10 @@
               <img src="assets/money1.png" alt="" />
             </figure>
             <div class="mx-auto pb-5">
-              <h2 class="card-title">Transfer Money</h2>
+              <h2 class="card-title">
+                Transfer <br />
+                Money
+              </h2>
             </div>
           </div>
           <div class="card bg-base-100">
@@ -66,7 +71,7 @@
               <h2 class="card-title">Get Bonus</h2>
             </div>
           </div>
-          <div class="card bg-base-100">
+          <div class="card bg-base-100" id="bill-box">
             <figure class="p-4">
               <img src="assets/purse1.png" alt="" />
             </figure>
@@ -74,7 +79,7 @@
               <h2 class="card-title">Pay Bill</h2>
             </div>
           </div>
-          <div class="card bg-base-100">
+          <div class="card bg-base-100" id="tran-box">
             <figure class="p-4">
               <img src="assets/transaction1.png" alt="" />
             </figure>
@@ -83,8 +88,141 @@
             </div>
           </div>
         </div>
+        <!-- Add money -->
+        <form class="mt-10" id="add-money-container">
+          <h1 class="font-bold text-2xl pb-3">Add Money</h1>
+          <div class="">
+            <div class="flex-col lg:flex-row-reverse">
+              <div class="card bg-base-100 w-full shrink-0">
+                <div class="card-body boder">
+                  <fieldset class="fieldset">
+                    <label class="font-bold">Select a bank</label>
+                    <select
+                      required
+                      class="rounded-3xl bg-gray-200 border-none mb-4 p-3 w-80"
+                      name="options"
+                      id="dropdown"
+                    >
+                      <option value="" disabled selected>Select One</option>
+                      <option value="bkash">Bkash</option>
+                      <option value="nagad">Nagad</option>
+                      <option value="visa">Visa</option>
+                    </select>
+                    <label class="font-bold">Bank Account Number</label>
+                    <input
+                      value="01786945559"
+                      id="account-number"
+                      type="text"
+                      class="input rounded-3xl bg-gray-200 border-none mb-4"
+                      placeholder="Enter your number"
+                      required
+                    />
+                    <label class="font-bold">Amount to Add</label>
+                    <input
+                      id="amount"
+                      type="text"
+                      class="input rounded-3xl bg-gray-200 border-none mb-4"
+                      placeholder="Enter Amount to Add"
+                      required
+                    />
+                    <label class="font-bold">Pin Number</label>
+                    <input
+                      value="1234"
+                      id="pin"
+                      type="password"
+                      class="input rounded-3xl bg-gray-200 border-none mb-4"
+                      placeholder="Enter 4 Digit Pin"
+                      required
+                    />
+                    <div><a class="link link-hover">Forgot password?</a></div>
+                    <button
+                      id="add-money"
+                      class="btn bg-blue-600 text-white mt-4 rounded-3xl border-none"
+                    >
+                      Add Money
+                    </button>
+                  </fieldset>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+        <!-- Cashout -->
+        <form class="mt-10" id="cashout-container">
+          <h1 class="font-bold text-2xl pb-3">Cash Out</h1>
+          <div class="">
+            <div class="flex-col lg:flex-row-reverse">
+              <div class="card bg-base-100 w-full shrink-0">
+                <div class="card-body boder">
+                  <fieldset class="fieldset">
+                    <label class="font-bold">Agent Number</label>
+                    <input
+                      value="01517800078"
+                      id="agent-number"
+                      type="text"
+                      class="input rounded-3xl bg-gray-200 border-none mb-4"
+                      placeholder="Enter your number"
+                      required
+                    />
+                    <label class="font-bold">Amount</label>
+                    <input
+                      id="cashout-amount"
+                      type="text"
+                      class="input rounded-3xl bg-gray-200 border-none mb-4"
+                      placeholder="Enter Amount to Withdraw"
+                      required
+                    />
+                    <label class="font-bold">Pin Number</label>
+                    <input
+                      value="1234"
+                      id="pin"
+                      type="password"
+                      class="input rounded-3xl bg-gray-200 border-none mb-4"
+                      placeholder="Enter 4 Digit Pin"
+                      required
+                    />
+                    <div><a class="link link-hover">Forgot password?</a></div>
+                    <button
+                      id="cashout-money"
+                      class="btn bg-blue-600 text-white mt-4 rounded-3xl border-none"
+                    >
+                      Withdraw Money
+                    </button>
+                  </fieldset>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+        <!-- Transaction -->
+        <div id="transaction-history">
+          <h1 class="font-bold text-3xl text-red-700 pt-8 text-center">
+            Transaction History
+          </h1>
+        </div>
+        <!-- Paybill -->
+        <!-- Open the modal using ID.showModal() method -->
+        <!-- <button class="btn" onclick="my_modal_1.showModal()">open modal</button> -->
+        <dialog id="my_modal_1" class="modal">
+          <div class="modal-box">
+            <h3 class="text-lg font-bold">Pay Bill!!!!</h3>
+            <p class="py-4">Press ESC key or click the button below to close</p>
+            <div class="modal-action">
+              <form method="dialog">
+                <!-- if there is a button in form, it will close the modal -->
+                <button class="btn">Close</button>
+              </form>
+            </div>
+          </div>
+        </dialog>
       </main>
     </section>
+    <script src="utilities/utilities.js"></script>
+    <script src="utilities/toggle.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/addMoney.js"></script>
+    <script src="js/cashout.js"></script>
+    <script src="js/transaction.js"></script>
+    <script src="js/paybill.js"></script>
   </body>
 </html>
